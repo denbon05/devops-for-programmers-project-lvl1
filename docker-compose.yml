@@ -6,4 +6,13 @@ services:
       context: .
       dockerfile: Dockerfile.production
     image: denbon05/devops-for-programmers-project-lvl1
-    command: npm test
+    command: bash -c 'sleep 3 && npm test'
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14.5-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres

@@ -2,10 +2,10 @@ compose-test:
 	docker-compose -f docker-compose.yml up \
 	--abort-on-container-exit --exit-code-from app
 
-compose-run:
+compose-up:
 	docker-compose up --abort-on-container-exit
 
-compose-build-prod:
-	docker-compose -f docker-compose.yml build app
+compose-build:
+	docker-compose -f docker-compose.yml build
 
 ci: compose-test
