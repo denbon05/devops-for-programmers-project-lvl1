@@ -20,5 +20,5 @@
 ```sh
 make compose-test # test app
 make compose-build # build container
-make compose-up # run app in dev mode
+make compose-up # run app in dev mode on https://localhost
 ```

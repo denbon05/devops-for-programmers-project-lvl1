@@ -5,6 +5,9 @@ compose-test:
 compose-up:
 	docker-compose up --abort-on-container-exit
 
+compose-down:
+	docker-compose down
+
 compose-build:
 	docker-compose -f docker-compose.yml build
 
