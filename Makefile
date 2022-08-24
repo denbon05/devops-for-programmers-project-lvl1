@@ -11,7 +11,4 @@ compose-down:
 compose-build:
 	docker-compose -f docker-compose.yml build
 
-ci: copy-envs compose-test
-
-copy-envs:
-	cp app/.env.example app/.env
+ci: compose-test
