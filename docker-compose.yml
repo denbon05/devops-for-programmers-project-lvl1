@@ -9,7 +9,7 @@ services:
     command: bash -c 'sleep 3 && npm test'
     volumes:
       - ./app/.env.example:/app/.env
-    env_file: app/.env
+    env_file: app/.env.example
     depends_on:
       - db
 
